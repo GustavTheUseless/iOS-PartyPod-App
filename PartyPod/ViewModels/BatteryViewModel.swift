@@ -29,5 +29,13 @@ struct BatteryViewModel {
         return endText
     }
     
+    func getBatteryTitle(index: Int) -> String {
+        return batteries[index].name
+    }
+    
+    func getBatteriesLength() -> Int {
+        return batteries.count
+    }
+    
     func setBatteryStatus() {}
 }

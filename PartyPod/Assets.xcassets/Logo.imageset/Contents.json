@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "PartyPod black.png",
+      "filename" : "PARTYPOD - Black.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,12 +12,12 @@
           "value" : "dark"
         }
       ],
-      "filename" : "PartyPod logo.png",
+      "filename" : "PARTYPOD - White.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "PartyPod black@2x.png",
+      "filename" : "PARTYPOD - Black@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -28,12 +28,12 @@
           "value" : "dark"
         }
       ],
-      "filename" : "PartyPod logo@2x.png",
+      "filename" : "PARTYPOD - White@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "PartyPod black@3x.png",
+      "filename" : "PARTYPOD - Black@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     },
@@ -44,7 +44,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "PartyPod logo@3x.png",
+      "filename" : "PARTYPOD - White@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

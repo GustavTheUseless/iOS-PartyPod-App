@@ -33,21 +33,24 @@ struct MainContentView: View {
                 ScrollView(.vertical, showsIndicators: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, content: {
                     Spacer()
                     Spacer()
-                    LazyVStack(alignment: .center, spacing: -5, pinnedViews: [], content: {
-                        ForEach(0...2, id: \.self) { count in
-                            switch currentSection {
-                            case 1:
-                                BatteryCardView(batteryStatusText: batteryViewModel.getBatteryStatusText(index: count)).padding()
-                            case 2:
-                                SpeakerCardView().padding()
-                            default:
-                                Rectangle()
+                    if (currentSection == 1) {
+                        LazyVStack(alignment: .center, spacing: -15, pinnedViews: [], content: {
+                            ForEach(1...batteryViewModel.getBatteriesLength(), id: \.self) { index in
+                                BatteryCardView(batteryStatusText: batteryViewModel.getBatteryStatusText(index: index-1), batteryTitle: batteryViewModel.getBatteryTitle(index: index-1)).padding()
                             }
-                        }
-                    })
+                        })
+                    } else if (currentSection == 2) {
+                        LazyVStack(alignment: .center, spacing: -15, pinnedViews: [], content: {
+                            ForEach(1...2, id: \.self) { index in
+                                SpeakerCardView().padding()
+                            }
+                        })
+                    }
                 })
             }
-            .navigationBarItems(leading: Image(Constants.PARTYPOD_LOGO_IMAGE))
+            .navigationBarItems(leading: Image(Constants.PARTYPOD_LOGO_IMAGE).resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 250))
             .toolbar(content: {
                 NavigationLink(
                     destination: SettingsView(),
@@ -62,6 +65,7 @@ struct MainContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         MainContentView()
+            
         
     }
 }
