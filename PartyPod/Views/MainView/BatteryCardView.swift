@@ -8,27 +8,32 @@
 import SwiftUI
 
 struct BatteryCardView: View {
+    var batteryStatusText: Text
+    
     var body: some View {
-        HStack(alignment: .center, spacing: 30, content: {
+        ZStack(alignment: Alignment(horizontal: .center, vertical: .center), content: {
+            RoundedRectangle(cornerRadius: 15.0)
+                .foregroundColor(.white)
+                .shadow(radius: 10)
             HStack(alignment: .center, spacing: -20, content: {
-                Image("Battery")
+                Image(Constants.BATTERY_IMAGE_LARGE)
                 VStack(alignment: .leading, spacing: 2, content: {
                     Text("BATTERY").font(.callout).bold().italic()
-                    Text("100% CHARGED").font(.caption2).foregroundColor(.green).bold().italic()
+                    batteryStatusText
                 })
-            })
-            VStack {
                 Spacer()
-                Text("MORE INFO").font(.footnote).italic().padding()
-            }
-        }).background(Color.white).cornerRadius(15).shadow(radius: 10)
-        
+                VStack {
+                    Spacer()
+                    Text("MORE INFO").font(.footnote).italic().padding()
+                }
+            })
+        })
     }
 }
 
 struct BatteryCardView_Previews: PreviewProvider {
     static var previews: some View {
-        BatteryCardView()
+        BatteryCardView(batteryStatusText: Text("100% CHARGED").font(.caption2).foregroundColor(.green).bold().italic())
             .previewLayout(.fixed(width: 375, height: /*@START_MENU_TOKEN@*/100.0/*@END_MENU_TOKEN@*/))
     }
 }

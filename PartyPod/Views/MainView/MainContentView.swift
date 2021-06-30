@@ -9,11 +9,11 @@ import SwiftUI
 
 struct MainContentView: View {
     
-    @State private var currentSection = 1
     
-    init() {
-        UINavigationBar.appearance().tintColor = UIColor.black
-    }
+    var batteryViewModel = BatteryViewModel()
+    var speakerViewModel = SpeakerViewModel()
+    
+    @State private var currentSection = 1
     
     var body: some View {
         NavigationView(content: {
@@ -33,13 +33,13 @@ struct MainContentView: View {
                 ScrollView(.vertical, showsIndicators: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, content: {
                     Spacer()
                     Spacer()
-                    LazyVStack(alignment: .center, spacing: 15, pinnedViews: [], content: {
-                        ForEach(1...3, id: \.self) { count in
+                    LazyVStack(alignment: .center, spacing: -5, pinnedViews: [], content: {
+                        ForEach(0...2, id: \.self) { count in
                             switch currentSection {
                             case 1:
-                                BatteryCardView()
+                                BatteryCardView(batteryStatusText: batteryViewModel.getBatteryStatusText(index: count)).padding()
                             case 2:
-                                SpeakerCardView()
+                                SpeakerCardView().padding()
                             default:
                                 Rectangle()
                             }
@@ -47,13 +47,13 @@ struct MainContentView: View {
                     })
                 })
             }
-            .navigationBarItems(leading: Image("Logo"))
+            .navigationBarItems(leading: Image(Constants.PARTYPOD_LOGO_IMAGE))
             .toolbar(content: {
-                Button(action: {
-                    // TODO: Settings
-                }, label: {
-                    Image(systemName: "slider.horizontal.3")
-                })
+                NavigationLink(
+                    destination: SettingsView(),
+                    label: {
+                        Image(systemName: "slider.horizontal.3")
+                    })
             })
         })
     }
@@ -62,6 +62,6 @@ struct MainContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         MainContentView()
-            
+        
     }
 }

@@ -13,6 +13,12 @@
 		6F443B55268940F80005CCB5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F443B54268940F80005CCB5 /* Preview Assets.xcassets */; };
 		6F443B61268944840005CCB5 /* BatteryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F443B60268944840005CCB5 /* BatteryCardView.swift */; };
 		6F443B63268BE5AF0005CCB5 /* SpeakerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F443B62268BE5AF0005CCB5 /* SpeakerCardView.swift */; };
+		6F443B66268BEFE00005CCB5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F443B65268BEFE00005CCB5 /* SettingsView.swift */; };
+		6F443B69268CA17F0005CCB5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F443B68268CA17F0005CCB5 /* Constants.swift */; };
+		6F443B6B268CA37A0005CCB5 /* Battery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F443B6A268CA37A0005CCB5 /* Battery.swift */; };
+		6F443B6D268CA4330005CCB5 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F443B6C268CA4330005CCB5 /* Speaker.swift */; };
+		6F443B6F268CA52D0005CCB5 /* BatteryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F443B6E268CA52D0005CCB5 /* BatteryViewModel.swift */; };
+		6F443B71268CA63D0005CCB5 /* SpeakerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F443B70268CA63D0005CCB5 /* SpeakerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		6F443B56268940F80005CCB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F443B60268944840005CCB5 /* BatteryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryCardView.swift; sourceTree = "<group>"; };
 		6F443B62268BE5AF0005CCB5 /* SpeakerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerCardView.swift; sourceTree = "<group>"; };
+		6F443B65268BEFE00005CCB5 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		6F443B68268CA17F0005CCB5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6F443B6A268CA37A0005CCB5 /* Battery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Battery.swift; sourceTree = "<group>"; };
+		6F443B6C268CA4330005CCB5 /* Speaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
+		6F443B6E268CA52D0005CCB5 /* BatteryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryViewModel.swift; sourceTree = "<group>"; };
+		6F443B70268CA63D0005CCB5 /* SpeakerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,7 @@
 				6F443B5D2689413D0005CCB5 /* Models */,
 				6F443B5C268941360005CCB5 /* Views */,
 				6F443B5E2689414F0005CCB5 /* ViewModels */,
+				6F443B67268CA15D0005CCB5 /* Utils */,
 				6F443B51268940F80005CCB5 /* Assets.xcassets */,
 				6F443B56268940F80005CCB5 /* Info.plist */,
 				6F443B53268940F80005CCB5 /* Preview Content */,
@@ -78,6 +91,7 @@
 		6F443B5C268941360005CCB5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6F443B64268BEFC00005CCB5 /* SettingsView */,
 				6F443B5F268944000005CCB5 /* MainView */,
 			);
 			path = Views;
@@ -86,6 +100,8 @@
 		6F443B5D2689413D0005CCB5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6F443B6A268CA37A0005CCB5 /* Battery.swift */,
+				6F443B6C268CA4330005CCB5 /* Speaker.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -93,6 +109,8 @@
 		6F443B5E2689414F0005CCB5 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				6F443B6E268CA52D0005CCB5 /* BatteryViewModel.swift */,
+				6F443B70268CA63D0005CCB5 /* SpeakerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -105,6 +123,22 @@
 				6F443B62268BE5AF0005CCB5 /* SpeakerCardView.swift */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		6F443B64268BEFC00005CCB5 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				6F443B65268BEFE00005CCB5 /* SettingsView.swift */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		6F443B67268CA15D0005CCB5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6F443B68268CA17F0005CCB5 /* Constants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,10 +210,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F443B71268CA63D0005CCB5 /* SpeakerViewModel.swift in Sources */,
+				6F443B6B268CA37A0005CCB5 /* Battery.swift in Sources */,
+				6F443B66268BEFE00005CCB5 /* SettingsView.swift in Sources */,
+				6F443B6F268CA52D0005CCB5 /* BatteryViewModel.swift in Sources */,
 				6F443B63268BE5AF0005CCB5 /* SpeakerCardView.swift in Sources */,
+				6F443B6D268CA4330005CCB5 /* Speaker.swift in Sources */,
 				6F443B50268940F40005CCB5 /* MainContentView.swift in Sources */,
 				6F443B61268944840005CCB5 /* BatteryCardView.swift in Sources */,
 				6F443B4E268940F40005CCB5 /* PartyPodApp.swift in Sources */,
+				6F443B69268CA17F0005CCB5 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +359,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = none.PartyPod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -340,7 +380,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = none.PartyPod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
