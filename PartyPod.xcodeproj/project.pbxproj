@@ -8,18 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		6F443B4E268940F40005CCB5 /* PartyPodApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F443B4D268940F40005CCB5 /* PartyPodApp.swift */; };
-		6F443B50268940F40005CCB5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F443B4F268940F40005CCB5 /* ContentView.swift */; };
+		6F443B50268940F40005CCB5 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F443B4F268940F40005CCB5 /* MainContentView.swift */; };
 		6F443B52268940F80005CCB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F443B51268940F80005CCB5 /* Assets.xcassets */; };
 		6F443B55268940F80005CCB5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F443B54268940F80005CCB5 /* Preview Assets.xcassets */; };
+		6F443B61268944840005CCB5 /* BatteryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F443B60268944840005CCB5 /* BatteryCardView.swift */; };
+		6F443B63268BE5AF0005CCB5 /* SpeakerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F443B62268BE5AF0005CCB5 /* SpeakerCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6F443B4A268940F40005CCB5 /* PartyPod.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyPod.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F443B4D268940F40005CCB5 /* PartyPodApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyPodApp.swift; sourceTree = "<group>"; };
-		6F443B4F268940F40005CCB5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6F443B4F268940F40005CCB5 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		6F443B51268940F80005CCB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F443B54268940F80005CCB5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6F443B56268940F80005CCB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F443B60268944840005CCB5 /* BatteryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryCardView.swift; sourceTree = "<group>"; };
+		6F443B62268BE5AF0005CCB5 /* SpeakerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				6F443B4D268940F40005CCB5 /* PartyPodApp.swift */,
-				6F443B4F268940F40005CCB5 /* ContentView.swift */,
+				6F443B5D2689413D0005CCB5 /* Models */,
+				6F443B5C268941360005CCB5 /* Views */,
+				6F443B5E2689414F0005CCB5 /* ViewModels */,
 				6F443B51268940F80005CCB5 /* Assets.xcassets */,
 				6F443B56268940F80005CCB5 /* Info.plist */,
 				6F443B53268940F80005CCB5 /* Preview Content */,
@@ -67,6 +73,38 @@
 				6F443B54268940F80005CCB5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6F443B5C268941360005CCB5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6F443B5F268944000005CCB5 /* MainView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6F443B5D2689413D0005CCB5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6F443B5E2689414F0005CCB5 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6F443B5F268944000005CCB5 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				6F443B4F268940F40005CCB5 /* MainContentView.swift */,
+				6F443B60268944840005CCB5 /* BatteryCardView.swift */,
+				6F443B62268BE5AF0005CCB5 /* SpeakerCardView.swift */,
+			);
+			path = MainView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +176,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F443B50268940F40005CCB5 /* ContentView.swift in Sources */,
+				6F443B63268BE5AF0005CCB5 /* SpeakerCardView.swift in Sources */,
+				6F443B50268940F40005CCB5 /* MainContentView.swift in Sources */,
+				6F443B61268944840005CCB5 /* BatteryCardView.swift in Sources */,
 				6F443B4E268940F40005CCB5 /* PartyPodApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
